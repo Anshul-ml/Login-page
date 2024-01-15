@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Video & Audio Summarizer</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Video & Audio Summarizer</h1>
+        <form id="uploadForm">
+            <label for="fileInput">Upload Video or Audio:</label>
+            <input type="file" id="fileInput" accept="video/*, audio/*" required>
+            <button type="button" onclick="uploadFile()">Summarize</button>
+        </form>
+        <div id="loading" class="hidden">Loading...</div>
+        <div id="result" class="hidden">
+            <h2>Summary:</h2>
+            <p id="textSummary"></p>
+            <audio controls id="audioSummary" class="hidden"></audio>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
